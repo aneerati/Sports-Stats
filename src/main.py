@@ -1,8 +1,8 @@
-import bs4
+from bs4 import BeautifulSoup
 
-with open("index.html", 'r') as html_file:
+
+with open('home.html', 'r') as html_file:
     content = html_file.read()
-    print(content)
 
-    soup = bs4.BeautifulSoup(content, 'lxml')
+    soup = BeautifulSoup(content, 'lxml')
     print(soup.prettify())
